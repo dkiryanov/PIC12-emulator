@@ -344,25 +344,25 @@ void Interpretator::Interpret(Processor& processor)
 								break;
 							}
 							break;
-						case 1:											// 11101xxxxxxxxx
+						case 1:	// 11101xxxxxxxxx
 							switch (GetBit(data, 8))
 							{
-							case 0:										// 111010xxxxxxxx
-								processor.XORLW(GetEightBitsValue(data));
-								break;
-							}
+								case 0:	// 111010xxxxxxxx
+									processor.XORLW(GetEightBitsValue(data));
+									break;
+								}
 							break;
 						}
 						break;
-					case 1:												// 1111xxxxxxxxxx
+					case 1: // 1111xxxxxxxxxx												
 						switch (GetBit(data, 9))
 						{
-						case 0:											// 11110xxxxxxxxx
-							processor.SUBLW(GetEightBitsValue(data));
-							break;
-						case 1:											// 11111xxxxxxxxx
-							processor.ADDLW(GetEightBitsValue(data));
-							break;
+							case 0: // 11110xxxxxxxxx											
+								processor.SUBLW(GetEightBitsValue(data));
+								break;
+							case 1:	// 11111xxxxxxxxx										
+								processor.ADDLW(GetEightBitsValue(data));
+								break;
 						}
 						break;
 					}

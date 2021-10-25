@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChangeAnalizer">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ChangeAnalizer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileService">
+    <Position X="8" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAAAAAAAAAAAAIAAAAAAAAACAQAAIAAAAAAEA=</HashCode>
+      <FileName>FileService.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Interpretator">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Interpretator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Processor" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="~Processor" Hidden="true" />
+      <Method Name="CallStackPop" Hidden="true" />
+      <Method Name="CallStackPush" Hidden="true" />
+      <Method Name="ConvertBinToDecimal" Hidden="true" />
+      <Method Name="ConvertDecimalToBin" Hidden="true" />
+      <Method Name="GetCurrentData" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQhAlAUDHWAAIk5IBAAEAACAQASgUACQEMQAYAJMIQA=</HashCode>
+      <FileName>Processor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

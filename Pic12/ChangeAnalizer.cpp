@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "ChangeAnalizer.h"
 #include "Processor.h"
 #include "RegisterConstants.h"
@@ -15,7 +15,7 @@ ChangeAnalizer::~ChangeAnalizer()
 
 void ChangeAnalizer::AnalyzeChanges(Processor previous, Processor current)
 {
-	if (current.W != previous.W)
+	if (current.W != previous.W) // сравниваем текущее состояние W с предыдущим
 	{
 		printf("\tW = %d\n", current.W);
 	}
@@ -26,10 +26,10 @@ void ChangeAnalizer::AnalyzeChanges(Processor previous, Processor current)
 		{
 			continue;
 		}
-
+		// получаем данные из памяти данных
 		char data = current.SavedDataMemory[i];
 
-		switch (i)
+		switch (i) // выводим информацию об изменении регистра STATUS
 		{
 			case STATUS:
 				std::cout << "STATUS = ";
@@ -39,7 +39,7 @@ void ChangeAnalizer::AnalyzeChanges(Processor previous, Processor current)
 			default:
 				printf("\t%02Xh = ", i);
 		}
-
+		// выводим информацию об измененных данных
 		for (int j = 0; j < 8; j++)
 		{
 			if (data & 0x80)

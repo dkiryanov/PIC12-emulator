@@ -269,7 +269,7 @@ void Processor::MOVF(unsigned char d, unsigned char f)
 
 	unsigned char result = Registers(DataMemory, f);
 
-	if (d)
+	if (d) // Если d=1, значение сохраняется в регистре 'f'
 	{
 		Registers(DataMemory, f) = result;
 
@@ -277,10 +277,14 @@ void Processor::MOVF(unsigned char d, unsigned char f)
 	}
 	else
 	{
+		// Если d=0, значение сохраняется в регистре W
 		W = result;
 	}
 
+	// Изменяем флаг Z
 	SetZeroFlag(result);
+
+	// Увеличиваем счетчик команд
 	PC++;
 }
 

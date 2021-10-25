@@ -51,7 +51,7 @@ class Processor
 		 * Adds registers W and 'f'
 		 *
 		 * Сложить содержимое регистров W и 'f'. 
-		 * Если d=0, результатсохраняетсяврегистре W. 
+		 * Если d=0, результат сохраняется в регистре W. 
 		 * Если d=1, результат сохраняется в регистре 'f'.
 		 */
 		void ADDWF(unsigned char d, unsigned char f);
